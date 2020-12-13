@@ -1,0 +1,2525 @@
+body {
+    font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+    color: #000;
+    background-color: #fff;
+    transition: 0.25s ease;
+}
+
+#txtSlide {
+    position: relative;
+    width: 100%;
+    background-color: #e5e5e5;
+    .mask {
+        width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        .txtWrap {
+            position: relative;
+            display: flex;
+            li {
+                position: relative;
+                width: 400px;
+                height: 70px;
+                text-align: center;
+                flex-shrink: 0;
+                a {
+                    display: block;
+                    padding: 16px 0;
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        line-height: 1.4;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                        strong {
+                            font-weight: 700;
+                        }
+                    }
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 70px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#header {
+    position: fixed;
+    top: 70;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    transition: 0.25s ease;
+    z-index: 5;
+    .inner {
+        position: relative;
+        display: flex;
+        width: 1400px;
+        margin: 0 auto;
+        #logo {
+            margin-right: 20px;
+            a {
+                display: block;
+                padding: 23px 0;
+                svg {
+                    width: 120px;
+                    vertical-align: middle;
+                    }
+                }
+        }
+        .gnbBtn {
+                position: absolute;
+                left: 0;
+                display: none;
+                width: 20px;
+                height: 30px;
+                margin: 15px 0;
+                cursor: pointer;
+                &:focus {
+                    outline: 1px solid #f00;
+                }
+                span {
+                    position: absolute;
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background-color: #000;
+                    &:nth-child(1){
+                        top: 6px;
+                    }
+                    &:nth-child(2){
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 15px;
+                    }
+                    &:nth-child(3){
+                        bottom: 6px;
+                        width: 8px;
+                    }
+                }
+        }
+        #gnb {
+                transition: 0.25s ease;
+                background-color: #fff;
+                .gnbList {
+                        > li {
+                            position: relative;
+                            display: inline-block;
+                            margin-right: 10px;
+                            .depth01 {
+                                display: block;
+                                height: 60px;
+                                line-height: 60px;
+                                font-size: 1.6rem;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                            }
+                            .depth02 {
+                                position: fixed;
+                                left: 0;
+                                transition: 0.5s ease-in-out;
+                                z-index: -99999;
+                                &.on{
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0,0,0,0.8);
+                                    z-index: 9999;
+                                    .depth02Inner {
+                                        left: 0;
+                                        opacity: 1;
+                                    }
+                                }
+                                .depth02Inner {
+                                    position: fixed;
+                                    left: -100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    width: 800px;
+                                    height: 100%;
+                                    padding-left: 5%;
+                                    background-color: #fff;
+                                    transition: 0.25s ease;
+                                    opacity: 0;
+                                    .depth02List {
+                                        height: 50%;
+                                        padding-top: 30px;
+                                        li {
+                                            line-height: 1;
+                                            margin: 20px 0;
+                                            a {
+                                                display: inline-block;
+                                                font-size: 2.8rem;
+                                                &:focus {
+                                                    outline: 1px solid #f00;
+                                                }  
+                                            }
+                                        }
+                                    }
+                                    .product  {
+                                        position: relative;
+                                        display: flex;
+                                        height: 50%;
+                                        padding-top: 50px;
+                                        &:before {
+                                            content: '추천상품';
+                                            position: absolute;
+                                            top: 0;
+                                            font-size: 1.2rem;
+                                        }
+                                        li {
+                                            width: 25%;
+                                            &:hover {
+                                                a {
+                                                    p {
+                                                        border-bottom: 1px solid #000;
+                                                    }
+                                                }
+                                            }
+                                            a {
+                                                display: block;
+                                                margin: 0 15px;
+                                                &:focus {
+                                                    outline: 1px solid #f00;
+                                                }   
+                                                img {
+                                                    width: 100%;
+                                                    vertical-align: top;
+                                                }
+                                                p {
+                                                    display: inline-block;
+                                                    line-height: 1;
+                                                    margin-top: 10px;
+                                                    font-size: 1.4rem;
+                                                    word-break: keep-all;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .btnClose {
+                                        position: absolute;
+                                        top: 20px;
+                                        right: 40px;
+                                        width: 40px;
+                                        height: 40px;
+                                        cursor: pointer;
+                                        &:focus {
+                                            outline: 1px solid #f00;
+                                        }
+                                        span {
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            display: block;
+                                            width: 40px;
+                                            height: 2px;
+                                            background-color: #000;
+                                            &:first-child {
+                                                transform: rotate(45deg);
+                                            }
+                                            &:last-child {
+                                                transform: rotate(-45deg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                }
+                .gnbFooter {
+                    display: none;
+                    .resizeList {
+                        > li {
+                            line-height: 1;
+                            padding: 0 10px;
+                            border-bottom: 1px solid #d9d9d9;
+                            &:first-child {
+                                border-top: 1px solid #d9d9d9;
+                            }
+                            a {
+                                position: relative;
+                                display: block;
+                                padding: 15px 0;
+                                font-size: 1.6rem;
+                                &:after {
+                                    content: ">";
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 0;
+                                    font-size: 2.6rem;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                    .address {
+                        margin-top: 40px;
+                        text-align: center;
+                        dl {
+                            dt {
+                                line-height: 1;
+                                font-size: 1.8rem;
+                                font-weight: 700;
+                            }
+                            dd {
+                                line-height: 1.5;
+                                font-size: 1.4rem;
+                                ul {
+                                    display: flex;
+                                    justify-content: center;
+                                    li {
+                                        margin: 0 8px;
+                                        &:first-child {
+                                            position: relative;
+                                            &:after {
+                                                content: '';
+                                                position: absolute;
+                                                top: 50%;
+                                                right: -10px;
+                                                transform: translateY(-50%);
+                                                display: block;
+                                                width: 1px;
+                                                height: 10px;
+                                                background-color: #000;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                > .btnClose {
+                    position: absolute;
+                    display: none;
+                    top: 20px;
+                    right: 40px;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    &:focus {
+                        outline: 1px solid #f00;
+                    }
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        display: block;
+                        width: 40px;
+                        height: 2px;
+                        background-color: #000;
+                        &:first-child {
+                            transform: rotate(45deg);
+                        }
+                        &:last-child {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+        }
+        #util {
+            position: absolute;
+            right: 0;
+            .utilList {
+                display: flex;
+                > li {
+                    position: relative;
+                    margin: 0 8px;
+                    &:hover {
+                            &:after {
+                                    display: block;
+                                }
+                        }
+                        &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: 15px;
+                                display: none;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #000;
+                         }
+                         &:last-child {
+                                margin: 0;
+                                color: #fff;
+                                background-color: #000;
+                                &:after {
+                                    display: none;
+                                }
+                                > a {
+                                    padding:0 10px 0 180px;   
+                                    transition: 0.25s ease;                         
+                                }
+                        }
+                    > a {
+                            display: block;
+                            height: 60px;
+                            line-height: 60px;
+                            &:focus {
+                                outline: 1px solid #f00;
+                            }
+                            i {
+                                font-size: 2.4rem;
+                                vertical-align: middle;
+                            }
+                            span {
+                                position: absolute;
+                                left: 10px;
+                                font-size: 1.6rem;
+                            }
+                    }
+                    .searchBox {
+                        position: fixed;
+                        left: 100%;
+                        width: 100%;
+                        height: 100%;
+                        border-top: 1px solid #dddcdc;
+                        transition: 0.25s ease-in;
+                        &.on {
+                            left: 0;
+                            background-color:rgba(0,0,0,0.8);
+                            .searchCon {
+                                
+                                .searchInner {
+                                    .btnClose {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                        .searchCon {
+                            position: relative;
+                            width: 100%;
+                            height: 700px;
+                            background-color: #fff;
+                            transition: 0.25s ease-in;
+                            .searchInner {
+                                position: relative;
+                                display: flex;
+                                width: 1400px;
+                                margin: 0 auto;
+                                .leftCon {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    width: 50%;
+                                    li {
+                                        position: relative;
+                                        width: 50%;
+                                        height: 350px;
+                                        &:nth-child(3n+1){
+                                            position: relative;
+                                            transition: 0.25s ease;
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                display: block;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-color: rgba(0,0,0,0.6);
+                                                z-index: 1;
+                                                opacity: 0;
+                                                transition: 0.25s ease;
+                                            }
+                                            &:hover {
+                                                &:before {
+                                                    opacity: 1;
+                                                }
+                                                a {
+                                                    p {
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                            a {
+                                                display: block;
+                                                height: 350px;
+                                                .mainBox {
+                                                    position: absolute;
+                                                    left: 0;
+                                                    height: 350px;
+                                                    img {
+                                                        width: 100% !important;
+                                                        height: 350px;
+                                                        vertical-align: top;
+                                                    }
+                                                    video {
+                                                        object-fit: cover;
+                                                        width: 350px;
+                                                        height: 350px;
+                                                    }
+                                                }
+                                                h3 {
+                                                    position: absolute;
+                                                    top: 20px;
+                                                    left: 20px;
+                                                    font-size: 1.4rem;
+                                                }
+                                                p {
+                                                    position: absolute;
+                                                    right: 20px;
+                                                    bottom: 20px;
+                                                    font-size: 3rem;
+                                                    font-weight: 700px;
+                                                    opacity: 0;
+                                                    z-index: 2;
+                                                    transition: 0.25s ease;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2){
+                                            a {
+                                                .mainBox {
+                                                    h3 {
+                                                        top: 20px;
+                                                        left: 20px;
+                                                        color: #fff;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(3){
+                                            a {
+                                                .mainBox {
+                                                    h3 {
+                                                        top: 20px;
+                                                        left: 20px;
+                                                        color: #000;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .infoBox {
+                                            height: 175px;
+                                            line-height: 1.8;
+                                            padding: 46.5px 0 46.5px 30px;
+                                            color: #000;
+                                            dt {
+                                                font-size: 3rem;
+                                                font-weight: 700;
+                                            }
+                                            dd {
+                                                &:hover {
+                                                    span {
+                                                        border-bottom: 1px solid #000;
+                                                    }
+                                                }
+                                                a {
+                                                    display: block;
+                                                    font-size: 1.6rem;
+                                                }
+                                            }
+                                        }
+                                        a {
+                                            display: block;
+                                            &:focus {
+                                                border:none;
+                                                outline-color: #f00;
+                                            }
+                                            &:hover {
+                                                .mainBox {
+                                                    &:before {
+                                                        opacity: 1;
+                                                    }
+                                                    p {
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+                                            .mainBox {
+                                                position: relative;
+                                                &:before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-color: rgba(0,0,0,0.6);
+                                                    opacity: 0;
+                                                    transition: 0.25s ease;
+                                                }
+                                                img {
+                                                    width: 100%;
+                                                    height: 175px;
+                                                    vertical-align: top;
+                                                }
+                                                h3 {
+                                                    position: absolute;
+                                                    font-size: 1.4rem;
+                                                }
+                                                p {
+                                                    position: absolute;
+                                                    bottom: 20px;
+                                                    left: 20px;
+                                                    font-size: 3rem;
+                                                    transition: 0.25s ease;
+                                                    opacity: 0;
+                                                    z-index: 2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .rightCon {
+                                    width: 50%;
+                                    color: #000;
+                                    > li {
+                                        height: 350px;
+                                        &:first-child {
+                                            padding-top: 120px;
+                                            border-bottom: 1px solid #000;
+                                            h3 {
+                                                padding-left: 40px;
+                                            }
+                                        }
+                                        &:last-child {
+                                            padding: 50px 0 0 120px;
+                                        }
+                                        h3 {
+                                            font-size: 4rem;
+                                            font-weight: 700;
+                                            margin-bottom: 40px;
+                                        }
+                                        label {
+                                            position: relative;
+                                            left: 70px;
+                                            input {
+                                                width: 70%;
+                                                height: 30px;
+                                                margin: 0 auto;
+                                                padding: 0 10px;
+                                                font-size: 2rem;
+                                                border-top: none;
+                                                border-right:none ;
+                                                border-left:none ;
+                                                &:focus {
+                                                    outline-color:#f00 ;
+                                                }
+                                                &::placeholder {
+                                                    font-size: 1.6rem;
+                                                }
+                                            }
+                                            a {
+                                                position: absolute;
+                                                right: 10px;
+                                                i {
+                                                    font-size: 2rem;
+                                                }
+                                            }
+                                        }
+                                        .searchList {
+                                            padding-left: 40px;
+                                            li {
+                                                margin: 20px 0;
+                                                &:hover {
+                                                    a {
+                                                        border-bottom: 1px solid #000;
+                                                    }
+                                                }
+                                                a {
+                                                    display: inline-block;
+                                                    &:focus {
+                                                        border-color: #f00;
+                                                        outline-color: #f00;
+                                                    }
+                                                    span {
+                                                        font-size: 2.6rem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .btnClose {
+                                    position: absolute;
+                                    display: none;
+                                    top: 20px;
+                                    right: 40px;
+                                    width: 40px;
+                                    height: 40px;
+                                    cursor: pointer;
+                                    &:focus {
+                                        outline: 1px solid #f00;
+                                    }
+                                    span {
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        display: block;
+                                        width: 40px;
+                                        height: 2px;
+                                        background-color: #000;
+                                        &:first-child {
+                                            transform: rotate(45deg);
+                                        }
+                                        &:last-child {
+                                            transform: rotate(-45deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }       
+}
+
+#sideBar {
+    position: fixed;
+    right: -220px;
+    bottom: 50px;
+    width: 300px;
+    border-radius: 100px 0 0 100px;
+    color: #fff;
+    background-color: #000;
+    z-index: 2;
+    transition: 0.25s ease;
+    &:hover {
+        right: 0;
+    }
+    a {
+        display: block;
+        padding: 20px;
+        &:focus {
+            outline: 1px solid #f00;
+        }
+        .sideLogo {
+            position: relative;
+            &:after {
+                content: '아우터 컬렉션 보러가기';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.6rem;
+                margin-left: 10px;
+            }
+            svg {
+                width: 50px;
+                fill:#fff
+            }
+        }
+    }
+}
+
+#login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9999;
+    .loginWrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        width: 450px;
+        height: 600px;
+        background-color: #fff;
+        h3 {
+            margin: 50px 0 30px;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .loginBox {
+            width: 380px;
+            margin: 0 auto;
+            > label {
+                display: block;
+                margin: 10px 0;
+                input {
+                    width: 380px;
+                    height: 50px;
+                    padding: 0 10px;
+                    &:focus {
+                        outline: 1px solid #f00;
+                    }
+                }
+            }
+            .subBox {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-top: 15px;
+                label {
+                    input {
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                    }
+                    span {
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                    }
+                }
+                a {
+                    &:hover {
+                        span {
+                            font-weight: 300;
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:focus {
+                        outline: 1px solid #f00;
+                    }
+                    span {
+                        position: relative;
+                        display: block;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+            .loginBtn {
+                display: block;
+                margin-top: 40px;
+                padding: 20px 0;
+                text-align: center;
+                color: #fff;
+                background-color: #000;
+                border: 1px solid #000;
+                transition: 0.25s ease;
+                &:hover {
+                    color: #000;
+                    background-color: #fff;
+                    outline-color: #000;
+                }
+                &:focus {
+                    outline: 1px solid #f00;
+                }
+                span {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+                
+            }
+            .kakakoLoginBtn {
+                display: block;
+                margin-top: 10px ;
+                padding: 20px 0;
+                text-align: center;
+                color: #000;
+                background-color: #f5ca0f;
+                border-color: #f5ca0f;
+                &:hover {
+                    opacity: 0.7;
+                }
+                &:focus {
+                    outline: 1px solid #f00;
+                }
+                i {
+                    font-size:1.8rem ;
+                }
+                span {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+            }
+        }
+        .infoBox {
+            display: flex;
+            align-items: flex-start;
+            width: 380px;
+            height: 70px;
+            margin: 15px auto 0 auto;
+            padding: 0 10px;
+            font-size: 1.6rem;
+            background-color: #f4f4f4;
+            dt {
+                padding: 10px 0;
+                font-size: 5rem;
+                margin-right: 10px;
+            }
+            dd {
+                line-height: 1.2;
+                padding: 16px 0;
+                word-break: keep-all;
+            }
+        }
+        .btnClose {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            &:focus {
+                outline: 1px solid #f00;
+            }
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 40px;
+                height: 2px;
+                background-color: #000;
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+#section01 {
+    padding-top: 60px;
+    z-index: 9;
+    .inner {
+        width: 1400px;
+        margin: 0 auto;
+        .winterChuck {
+            display: flex;
+            .main {
+                position: relative;
+                width: 50%;
+                .imgBox {
+                    img {
+                        width: 100%;
+                        height: 900px;
+                        vertical-align: top;
+                    }
+                }
+                .infoBox {
+                    position: absolute;
+                    top: 30px;
+                    left: 20px;
+                    z-index: 2;
+                    dt {
+                        line-height: 1.2;
+                        margin-bottom: 15px;
+                        font-size: 5rem;
+                        font-weight: 700;
+                    }
+                    dd {
+                        line-height: 1.2;
+                        font-size: 1.6rem;
+                        &.btnMore {
+                            margin-top: 10px;
+                            a {
+                                display: inline-block;
+                                padding: 15px 40px;
+                                font-size: 1.6rem;
+                                border: 1px solid #000;
+                                background-color: #fff;
+                                transition: 0.25s ease;
+                                &:hover {
+                                    color: #fff;
+                                    border-color: #fff;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: none;
+                    margin: 20px 30px;
+                    padding: 15px 0;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    transition: 0.25s ease;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                li {
+                    position: relative;
+                    width: 50%;
+                    height: 450px;
+                    &:hover {
+                        .imgBox {
+                            img {
+                                &:last-child {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        &:focus {
+                            border: 1px solid #f00;
+                            z-index: 9;
+                        }
+                        .imgBox {
+                            position: relative;
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                height: 450px;
+                                transition: 0.25s  ease;
+                                vertical-align: top;
+                                &:last-child {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        .infoBox {
+                            position: absolute;
+                            bottom: 30px;
+                            left: 30px;
+                            line-height: 1.5;
+                            font-size: 1.4rem;
+                            font-weight: 300;
+                            z-index: 1;
+                            dt {
+                                &:hover {
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: 2px;
+                                        left: 0;
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #000;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            position: absolute;
+                            top: 20px;
+                            right: 30px;
+                            line-height: 1.2;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            z-index: 1;
+                        }
+                    }
+                    .btnWish {
+                        position: absolute;
+                        top: 20px;
+                        left: 30px;
+                        cursor:pointer;
+                        &:hover {
+                            i {
+                                font-size: 3rem;
+                            }
+                        }
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                        i {
+                            font-size: 2.4rem;
+                            transition: 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .choose {
+            margin: 50px 0;
+            text-align: center;
+            .title {
+                margin-bottom: 50px;
+                dt {
+                    margin-bottom: 15px;
+                    font-size: 3.4rem;
+                    font-weight: 700;
+                }
+                dd {
+                    a {
+                        display: inline-block;
+                        font-size: 2rem;
+                        font-weight: 500;
+                        &:hover {
+                            border-bottom: 1px solid #000;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            .chooseList {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin: 0 20px;
+                    a {
+                        display: block;
+                        .imgBox {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        h3 {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+            .resizeBtnMore {
+                display: none;
+                margin: 20px 30px;
+                padding: 15px 0;
+                text-align: center;
+                color: #fff;
+                background-color: #000;
+                transition: 0.25s ease;
+                &:hover {
+                    opacity: 0.7;
+                }
+                &:focus {
+                    border: 1px solid #f00;
+                }
+                span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .metallic {
+            display: flex;
+            .main {
+                position: relative;
+                width: 50%;
+                .imgBox {
+                    img {
+                        width: 100%;
+                        height: 900px;
+                        vertical-align: top;
+                    }
+                }
+                .infoBox {
+                    position: absolute;
+                    top: 30px;
+                    left: 20px;
+                    z-index: 2;
+                    dt {
+                        line-height: 1.2;
+                        margin-bottom: 15px;
+                        font-size: 5rem;
+                        font-weight: 700;
+                    }
+                    dd {
+                        line-height: 1.2;
+                        font-size: 1.6rem;
+                        &.btnMore {
+                            margin-top: 10px;
+                            a {
+                                display: inline-block;
+                                padding: 15px 40px;
+                                font-size: 1.6rem;
+                                border: 1px solid #000;
+                                color: #fff;
+                                background-color: #000;
+                                transition: 0.25s ease;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                                &:hover {
+                                    color: #000;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: none;
+                    margin: 20px 30px;
+                    padding: 15px 0;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    transition: 0.25s ease;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                li {
+                    position: relative;
+                    width: 50%;
+                    height: 450px;
+                    &:hover {
+                        .imgBox {
+                            img {
+                                &:last-child {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        &:focus {
+                            border: 1px solid #f00;
+                            z-index: 9;
+                        }
+                        .imgBox {
+                            position: relative;
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                height: 450px;
+                                transition: 0.25s  ease;
+                                vertical-align: top;
+                                &:last-child {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        .infoBox {
+                            position: absolute;
+                            bottom: 30px;
+                            left: 30px;
+                            line-height: 1.5;
+                            font-size: 1.4rem;
+                            font-weight: 300;
+                            z-index: 1;
+                            dt {
+                                &:hover {
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: 2px;
+                                        left: 0;
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #000;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            position: absolute;
+                            top: 20px;
+                            right: 30px;
+                            line-height: 1.2;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            z-index: 1;
+                        }
+                    }
+                    .btnWish {
+                        position: absolute;
+                        top: 20px;
+                        left: 30px;
+                        cursor:pointer;
+                        &:hover {
+                            i {
+                                font-size: 3rem;
+                            }
+                        }
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                        i {
+                            font-size: 2.4rem;
+                            transition: 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .cozyClub {
+            display: flex;
+            .main {
+                position: relative;
+                width: 50%;
+                .imgBox {
+                    img {
+                        width: 100%;
+                        height: 900px;
+                        vertical-align: top;
+                    }
+                }
+                .infoBox {
+                    position: absolute;
+                    top: 30px;
+                    right: 20px;
+                    text-align: right;
+                    color: #fff;
+                    z-index: 2;
+                    dt {
+                        margin-bottom: 15px;
+                        font-size: 5rem;
+                        font-weight: 700;
+                    }
+                    dd {
+                        line-height: 1.2;
+                        font-size: 1.6rem;
+                        &.btnMore {
+                            margin-top: 10px;
+                            a {
+                                display: inline-block;
+                                padding: 15px 40px;
+                                font-size: 1.6rem;
+                                border: 1px solid #000;
+                                color: #000;
+                                background-color: #fff;
+                                transition: 0.25s ease;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                                &:hover {
+                                    color: #fff;
+                                    background-color: #000;
+                                    border-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: none;
+                    margin: 20px 30px;
+                    padding: 15px 0;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    transition: 0.25s ease;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 50%;
+                li {
+                    position: relative;
+                    height: 450px;
+                    &:nth-child(1){
+                        width: 100%;
+                        &:hover {
+                            a {
+                                .hoverBox {
+                                    background-color: rgba(0,0,0,0.8);
+                                    dt {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(n+2){
+                        width: 50%;
+                        &:hover {
+                            a {
+                                .imgBox {
+                                    img {
+                                        &:last-child {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            .imgBox {
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    transition: 0.25s ease;
+                                    &:last-child {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        &:focus {
+                            border: 1px solid #f00;
+                            z-index: 9;
+                        }
+                        .imgBox {
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: 450px;
+                                vertical-align: top;
+                            }
+                        }
+                        .hoverBox {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transition: 0.25s ease-in;
+                            dt {
+                                position: absolute;
+                                right: 20px;
+                                bottom: 20px;
+                                font-size: 3rem;
+                                font-weight: 700;
+                                color: #fff;
+                                transition: 0.25s ease-in;
+                                opacity: 0;
+                            }
+                            dd {
+                                padding: 20px 0 0 20px;
+                                font-size: 1.4rem;
+                                color: #fff;
+                            }
+                        }
+                        .infoBox {
+                            position: absolute;
+                            bottom: 30px;
+                            left: 30px;
+                            line-height: 1.5;
+                            font-size: 1.4rem;
+                            font-weight: 300;
+                            z-index: 1;
+                            dt {
+                                &:hover {
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: 2px;
+                                        left: 0;
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #000;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            position: absolute;
+                            top: 20px;
+                            right: 30px;
+                            line-height: 1.2;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            z-index: 1;
+                        }
+                    }
+                    .btnWish {
+                        position: absolute;
+                        top: 20px;
+                        left: 30px;
+                        cursor:pointer;
+                        &:hover {
+                            i {
+                                font-size: 3rem;
+                            }
+                        }
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                        i {
+                            font-size: 2.4rem;
+                            transition: 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .workWear {
+            display: flex;
+            .main {
+                position: relative;
+                width: 50%;
+                .imgBox {
+                    img {
+                        width: 100%;
+                        height: 900px;
+                        vertical-align: top;
+                    }
+                }
+                .infoBox {
+                    position: absolute;
+                    top: 30px;
+                    right: 20px;
+                    text-align: right;
+                    z-index: 2;
+                    dt {
+                        margin-bottom: 15px;
+                        font-size: 5rem;
+                        font-weight: 700;
+                    }
+                    dd {
+                        line-height: 1.2;
+                        font-size: 1.6rem;
+                        &.btnMore {
+                            margin-top: 10px;
+                            a {
+                                display: inline-block;
+                                padding: 15px 40px;
+                                font-size: 1.6rem;
+                                border: 1px solid #000;
+                                color: #fff;
+                                background-color: #000;
+                                transition: 0.25s ease;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                                &:hover {
+                                    color: #000;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: none;
+                    margin: 20px 30px;
+                    padding: 15px 0;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    transition: 0.25s ease;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 50%;
+                li {
+                    position: relative;
+                    height: 450px;
+                    &:nth-child(1){
+                        width: 100%;
+                        &:hover {
+                            a {
+                                .hoverBox {
+                                    background-color: rgba(0,0,0,0.8);
+                                    dt {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(n+2){
+                        width: 50%;
+                        &:hover {
+                            a {
+                                .imgBox {
+                                    img {
+                                        &:last-child {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            .imgBox {
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    transition: 0.25s ease;
+                                    &:last-child {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        &:focus {
+                            border: 1px solid #f00;
+                            z-index: 9;
+                        }
+                        .imgBox {
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: 450px;
+                                vertical-align: top;
+                            }
+                        }
+                        .hoverBox {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transition: 0.25s ease-in;
+                            dt {
+                                position: absolute;
+                                left: 50%;
+                                bottom: 20px;
+                                transform: translateX(-50%);
+                                font-size: 3rem;
+                                font-weight: 700;
+                                color: #fff;
+                                transition: 0.25s ease-in;
+                                opacity: 0;
+                            }
+                            dd {
+                                padding: 20px 0 0 20px;
+                                font-size: 1.4rem;
+                                color: #fff;
+                            }
+                        }
+                        .infoBox {
+                            position: absolute;
+                            bottom: 30px;
+                            left: 30px;
+                            line-height: 1.5;
+                            font-size: 1.4rem;
+                            font-weight: 300;
+                            z-index: 1;
+                            dt {
+                                &:hover {
+                                    position: relative;
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: 2px;
+                                        left: 0;
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #000;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            position: absolute;
+                            top: 20px;
+                            right: 30px;
+                            line-height: 1.2;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            z-index: 1;
+                        }
+                    }
+                    .btnWish {
+                        position: absolute;
+                        top: 20px;
+                        left: 30px;
+                        cursor:pointer;
+                        &:hover {
+                            i {
+                                font-size: 3rem;
+                            }
+                        }
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                        i {
+                            font-size: 2.4rem;
+                            transition: 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .collabo {
+            div {
+                &.paria {
+                    .pariaList {
+                        display: flex;
+                        li {
+                            position: relative;
+                            &:first-child {
+                                .infoBox {
+                                    position: absolute;
+                                    top: 40%;
+                                    left: 20px;
+                                    transform: translateY(-50%);
+                                    color: #fff;
+                                    z-index: 2;
+                                    dt {
+                                        line-height: 1.2;
+                                        margin-bottom: 15px;
+                                        font-size: 5rem;
+                                        font-weight: 700;
+                                    }
+                                    dd {
+                                        line-height: 1.2;
+                                        font-size: 1.6rem;
+                                        &:last-child {
+                                            a {
+                                                display: inline-block;
+                                                margin-top: 10px;
+                                                padding: 15px 40px;
+                                                color: #000;
+                                                background-color: #fff;
+                                                border:1px solid #fff;
+                                                transition: 0.25s ease;
+                                                &:hover {
+                                                    color: #fff;
+                                                    background-color: #000;
+                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .resizeBtnMore {
+                                    display: none;
+                                    margin: 20px 30px;
+                                    padding: 15px 0;
+                                    text-align: center;
+                                    color: #fff;
+                                    background-color: #000;
+                                    transition: 0.25s ease;
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+                                    &:focus {
+                                        border: 1px solid #f00;
+                                    }
+                                    span {
+                                        font-size: 1.6rem;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                &:hover {
+                                    a {
+                                        .hoverBox {
+                                            background-color: rgba(0,0,0,0.8);
+                                            dt {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                                a {
+                                    display: block;
+                                    .hoverBox {
+                                        position: absolute;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        color: #fff;
+                                        transition: 0.25s ease-in;
+                                        dt {
+                                            position: absolute;
+                                            bottom: 40px;
+                                            width: 100%;
+                                            line-height: 1.2;
+                                            text-align: center;
+                                            font-size: 3rem;
+                                            font-weight: 700;
+                                            opacity: 0;
+                                            transition: 0.25s ease-in;
+                                            opacity: 0;
+                                        }
+                                        dd {
+                                            padding: 20px 0 0 20px;
+                                            font-size: 1.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                            img {
+                                width: 100%;
+                                height: 900px;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                }
+                &.popTrading {
+                    display: flex;
+                    .main {
+                        position: relative;
+                        width: 50%;
+                        .imgBox {
+                            img {
+                                width: 100%;
+                                height: 900px;
+                                vertical-align: top;
+                            }
+                        }
+                        .infoBox {
+                            position: absolute;
+                            top: 30px;
+                            left: 20px;
+                            color: #fff;
+                            z-index: 2;
+                            dt {
+                                margin-bottom: 15px;
+                                font-size: 5rem;
+                                font-weight: 700;
+                            }
+                            dd {
+                                line-height: 1.2;
+                                font-size: 1.6rem;
+                                &.btnMore {
+                                    margin-top: 10px;
+                                    a {
+                                        display: inline-block;
+                                        padding: 15px 40px;
+                                        font-size: 1.6rem;
+                                        border: 1px solid #000;
+                                        color: #000;
+                                        background-color: #fff;
+                                        transition: 0.25s ease;
+                                        &:focus {
+                                            outline: 1px solid #f00;
+                                        }
+                                        &:hover {
+                                            color: #fff;
+                                            background-color: #000;
+                                            border-color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .resizeBtnMore {
+                            display: none;
+                            margin: 20px 30px;
+                            padding: 15px 0;
+                            text-align: center;
+                            color: #fff;
+                            background-color: #000;
+                            transition: 0.25s ease;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                            &:focus {
+                                border: 1px solid #f00;
+                            }
+                            span {
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+                    .items {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width: 50%;
+                        li {
+                            position: relative;
+                            height: 450px;
+                            &:nth-child(1){
+                                width: 100%;
+                                .imgBox {
+                                    img {
+                                        width: 100%;
+                                        height: 450px;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                            &:nth-child(n+2){
+                                width: 50%;
+                                &:hover {
+                                    a {
+                                        .imgBox {
+                                            img {
+                                                &:last-child {
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                a {
+                                    display: block;
+                                    &:focus {
+                                        border: 1px solid #f00;
+                                        z-index: 9;
+                                    }
+                                    .imgBox {
+                                        position: relative;
+                                        img {
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 450px;
+                                            vertical-align: top;
+                                        }
+                                    }
+                                    .hoverBox {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        transition: 0.25s ease-in;
+                                        dt {
+                                            position: absolute;
+                                            right: 20px;
+                                            bottom: 20px;
+                                            font-size: 3rem;
+                                            font-weight: 700;
+                                            color: #fff;
+                                            transition: 0.25s ease-in;
+                                            opacity: 0;
+                                        }
+                                        dd {
+                                            padding: 20px 0 0 20px;
+                                            font-size: 1.4rem;
+                                            color: #fff;
+                                        }
+                                    }
+                                    .infoBox {
+                                        position: absolute;
+                                        bottom: 30px;
+                                        left: 30px;
+                                        line-height: 1.5;
+                                        font-size: 1.4rem;
+                                        font-weight: 300;
+                                        z-index: 1;
+                                        dt {
+                                            &:hover {
+                                                position: relative;
+                                                &:after {
+                                                    content: '';
+                                                    position: absolute;
+                                                    bottom: 2px;
+                                                    left: 0;
+                                                    display: inline-block;
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    background-color: #000;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        position: absolute;
+                                        top: 20px;
+                                        right: 30px;
+                                        line-height: 1.2;
+                                        font-size: 1.4rem;
+                                        font-weight: 700;
+                                        z-index: 1;
+                                    }
+                                }
+                                .btnWish {
+                                    position: absolute;
+                                    top: 20px;
+                                    left: 30px;
+                                    cursor:pointer;
+                                    &:hover {
+                                        i {
+                                            font-size: 3rem;
+                                        }
+                                    }
+                                    &:focus {
+                                        border: 1px solid #f00;
+                                    }
+                                    i {
+                                        font-size: 2.4rem;
+                                        transition: 0.25s ease;
+                                    }
+                                }
+                                a {
+                                    .imgBox {
+                                        img {
+                                            position: absolute;
+                                            top: 0;
+                                            transition: 0.25s ease;
+                                            &:last-child {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .outer {
+            display: flex;
+            .main {
+                position: relative;
+                width: 50%;
+                .imgBox {
+                    img {
+                        width: 100%;
+                        height: 900px;
+                        vertical-align: top;
+                    }
+                }
+                .infoBox {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 20px;
+                    color: #fff;
+                    z-index: 2;
+                    dt {
+                        margin-bottom: 15px;
+                        font-size: 5rem;
+                        font-weight: 700;
+                    }
+                    dd {
+                        line-height: 1.2;
+                        font-size: 1.6rem;
+                        &.btnMore {
+                            margin-top: 10px;
+                            a {
+                                display: inline-block;
+                                padding: 15px 40px;
+                                font-size: 1.6rem;
+                                border: 1px solid #000;
+                                color: #000;
+                                background-color: #fff;
+                                border: 1px solid #fff;
+                                transition: 0.25s ease;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                                &:hover {
+                                    color: #fff;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: none;
+                    margin: 20px 30px;
+                    padding: 15px 0;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    transition: 0.25s ease;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 50%;
+                li {
+                    position: relative;
+                    width: 50%;
+                    height: 450px;
+                    &:focus {
+                        border: 1px solid #f00;
+                    }           
+                    &:nth-child(-n+2){
+                        &:hover {
+                            a {
+                                .imgBox {
+                                    img {
+                                        &:last-child {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        a {
+                            display: block;
+                            .imgBox {
+                                img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 450px;
+                                    vertical-align: top;
+                                    transition: 0.25s ease;
+                                    &:last-child {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                            .infoBox {
+                                position: absolute;
+                                bottom: 30px;
+                                left: 30px;
+                                line-height: 1.5;
+                                font-size: 1.4rem;
+                                font-weight: 300;
+                                z-index: 1;
+                                dt {
+                                    &:hover {
+                                        position: relative;
+                                        &:after {
+                                            content: '';
+                                            position: absolute;
+                                            bottom: 2px;
+                                            left: 0;
+                                            display: inline-block;
+                                            width: 100%;
+                                            height: 1px;
+                                            background-color: #000;
+                                        }
+                                    }
+                                }
+                                dd {
+                                    &:before {
+                                        content: "109,000 원";
+                                        margin-right: 10px;
+                                        text-decoration: line-through;
+                                        opacity: 0.7;
+                                    }
+                                    &:after {
+                                        content: "20%";
+                                        display: inline-block;
+                                        margin-left: 10px;
+                                        color: #f00;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                            p {
+                                position: absolute;
+                                top: 20px;
+                                right: 30px;
+                                line-height: 1.2;
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        width: 100%;
+                        &:hover {
+                            a {
+                                .hoverBox {
+                                    background-color: rgba(0,0,0,0.8);
+                                    dt {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            display: block;
+                            .imgBox {
+                                img {
+                                    position: static;
+                                    width: 100%;
+                                    height: 450px;
+                                    vertical-align: top;
+                                }
+                            }
+                            .hoverBox {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                transition: 0.25s ease-in;
+                                dt {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    font-size: 3rem;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    transition: 0.25s ease-in;
+                                    opacity: 0;
+                                }
+                                dd {
+                                    padding: 20px 0 0 20px;
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                   
+                    .btnWish {
+                        position: absolute;
+                        top: 20px;
+                        left: 30px;
+                        cursor:pointer;
+                        &:hover {
+                            i {
+                                font-size: 3rem;
+                            }
+                        }
+                        &:focus {
+                            border: 1px solid #f00;
+                        }
+                        i {
+                            font-size: 2.4rem;
+                            transition: 0.25s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section02 {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 260px;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #dddcdc;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color:#dddcdc;
+    }
+    .inner {
+        width: 1400px;
+        margin: 0 auto;
+        .community {
+            h2 {
+                margin: 70px 0 40px;
+                font-size: 3rem;
+                font-weight: 700;
+                text-align: center;
+            }
+            .communityList {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    position: relative;
+                    width: 24.5%;
+                    height: 100%;
+                    margin-bottom: 10px;
+                    &:nth-child(n+10){
+                        display: none;
+                    }
+                    &:nth-child(9){
+                        width: 100%;
+                        padding: 15px 0;
+                        font-size: 2.4rem;
+                        text-align: center;
+                        &:focus {
+                            border: 2px solid #f00;
+                        }
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                    a {
+                        display: block;
+                        height: 100%;
+                        .imgBox {
+                            img {
+                                width: 100%;
+                                height: 360px;
+                                vertical-align: top;
+                            }
+                        }
+                        span {
+                            position: absolute;
+                            right: 10px;
+                            bottom: 10px;
+                            z-index: 1;
+                            i {
+                                color: #fff;
+                                font-size: 2.4rem;
+                            }
+
+                        }
+                    }
+                }
+            
+        }
+        .marketing {
+            position: relative;
+            margin-top: 90px;
+            .marketingList {
+                display: flex;
+                li {
+                    width: 25%;
+                    height: 260px;
+                    padding-top: 30px;
+                    text-align: center;
+                    border-right: 1px solid #dddcdc;
+                    &:last-child {
+                        border: none;
+                    }
+                    .iconBox {
+                        svg {
+                            width: 80px;
+                            height: 40px;
+                        }
+                        .iconLink {
+                            display: inline-block;
+                            margin: 11px 8px 0;
+                            border: none;
+                            i {
+                                font-size: 3.4rem;
+                            }
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            margin: 15px 0;
+                            font-size: 1.8rem;
+                            font-weight: 700;
+                        }
+                        dd {
+                            line-height: 1.3;
+                            font-size: 1.4rem;
+                            color: #757575;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        margin-top: 20px;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                        border-bottom: 1px solid #757575;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {   
+    .footerList {
+            display: flex;
+            width: 1400px;
+            margin: 0 auto;
+            > li {
+                width: 20%;
+                padding: 30px 0 30px 30px;
+                border-right: 1px solid #dddcdc;
+                &:first-child {
+                    .footerDepth {
+                        li {
+                            display: inline-block;
+                        }
+                    }
+                }
+                &:last-child {
+                    border: none;
+                }
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+                .depthBtn {
+                    position: relative;
+                    display: none;
+                    width: 100%;
+                    padding: 10px;
+                    text-align: left;
+                    font-weight: 700;
+                    border-bottom: 1px solid 
+                    #dddcdc;
+                    cursor: pointer;
+                    &.on {
+                        &:after {
+                            content: "+";
+                        }
+                    }
+                    &:after {
+                        content: "-";
+                        position: absolute;
+                        display: inline-block;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        font-size: 2.4rem;
+                    }
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                }
+                .footerDepth {
+                    margin-top: 15px;
+                    li {
+                        &:last-child {
+                            a {
+                                i {
+                                    border-left: none;
+                                }
+                            }
+                        }
+                        a {
+                            display: block;
+                            font-size: 1.4rem;
+                            font-weight: 300;
+                            line-height: 1.5;
+                            i {
+                                font-size: 2.6rem;
+                                padding: 10px;
+                                border: 1px solid #dddcdc;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+    .address {
+        padding: 50px;
+        background-color: #000;
+        .inner {
+            display: flex;
+            justify-content: space-between;
+            width: 1400px;
+            margin: 0 auto;
+            color: #d9d9d9;
+            .dlBox {
+                font-size: 1.25rem;
+                dl {
+                    display: flex;
+                    line-height: 1.6;
+                    &:nth-child(3){
+                        display: block;
+                        dd {
+                            display: inline-block;
+                        }
+                    }
+                    dd {
+                        a {
+                            margin-left: 5px;
+                            &:focus {
+                                outline: 1px solid #f00;
+                            }
+                            span {
+                                font-weight: 700;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .resizeMenu {
+                    display: none;
+                    justify-content: center;
+                    color: #000;
+                    font-weight: 700;
+                    li {
+                        &:last-child {
+                            position: relative;
+                            padding-left: 10px;
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 51%;
+                                left: 5px;
+                                transform: translateY(-50%);
+                                display: block;
+                                width: 1px;
+                                height: 10px;
+                                background-color: #d9d9d9;
+                            }
+                        }
+                        a {
+                            display: block;
+                            &:focus {
+                                outline: 1px solid #f00;
+                            }
+                        }
+                    }
+                }
+                .allRight {
+                    margin-top: 30px;
+                }
+            }
+            .insurance {
+                font-size: 1.2rem;
+                dt {
+                    line-height: 1.4;
+                    word-break: keep-all;
+                }
+                dd {
+                    margin-top: 20px;
+                    a {
+                        font-weight: 700;
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                        &:focus {
+                            outline: 1px solid #f00;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

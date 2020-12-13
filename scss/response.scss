@@ -1,0 +1,1279 @@
+@media all and(max-width:1400px){ // *.inner
+    #header {
+        .inner {
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            #logo {
+                margin: 0 20px;
+            }
+            #util {
+                .utilList {
+                    > li {
+                        .searchBox {
+                            .searchCon {
+                                .searchInner {
+                                    width: 100%;
+                                    margin: 0;
+                                    flex-direction: column;
+                                    .leftCon {
+                                        display: none;
+                                    }
+                                    .rightCon {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            }
+                    }
+                }
+            }
+        }
+    }
+
+    #section01 {
+        .inner {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    #section02 {
+        .inner {
+            width: 100%;
+            margin: 0;
+            padding: 0 5px;
+            .community {
+                .communityList {
+                    li {
+                        &:nth-child(9){
+                            width: 50%;
+                            margin: 50px auto 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footerList {
+            width: 100%;
+            margin: 0;
+                > li {
+                    width: 100%;
+                    padding: 0;
+                    &:nth-child(-n+4){
+                        display: none;
+                    }
+                    h3 {
+                        display: none;
+                    }
+                    .depthBtn {
+                        display: block;
+                    }
+                    .footerDepth {
+                        margin: 0;
+                        padding: 0 10px;
+                        li {
+                            margin: 6px 0;
+                            a {
+                                display: inline-block;
+                                &:focus {
+                                    outline: 1px solid #f00;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+        .address {
+            .inner {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media all and(max-width:1250px){ // #footer.address
+    #footer {
+        .address {
+            .inner {
+                .dlBox {
+                    font-size: 1rem;
+                }
+                .insurance {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and(max-width:870px){ // #header #section01*article #section02*article
+   #header {
+       border-bottom: 1px solid #d9d9d9;
+       .inner {
+           #logo {
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+           }
+           .gnbBtn {
+            position: fixed;
+            left: 10px;
+            display: block;
+            }
+           #gnb {
+               position: absolute;
+               top: 60px;
+               left: -999px;
+               width: 100%;
+               height: 100vh;
+               background-color: #fff;
+               &.on {
+                   left: 0;
+               }
+               .gnbList {
+                   padding: 0 20px;
+                    li {
+                       display: block;
+                       .depth01 {
+                            display: inline-block;
+                            height: auto;
+                            line-height: 1;
+                            margin: 10px 0;
+                            font-size: 2.6rem;
+                       }
+                       .depth02 {
+                           top: 60px;
+                           transition: none;
+                           &.on {
+                                background-color: transparent;
+                           }
+                           .depth02Inner {
+                               width: 100%;
+                               padding-left: 20px;
+                               .product {
+                                   li {
+                                       a {
+                                           p {
+                                               margin-top: 5px;
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+               .gnbFooter {
+                   display: block;
+               }
+               .btnClose {
+                   display: block;
+               }
+           }
+           #util {
+               right: 10px;
+               .utilList {
+                   > li {
+                       &:nth-child(1){
+                           display: none;
+                       }
+                       &:nth-child(3){
+                           display: none;
+                       }
+                       &:nth-child(4){
+                           display: none;
+                       }
+                       &:last-child{
+                           background-color: transparent;
+                           &:hover {
+                               &:after {
+                                    display: block;
+                                }
+                           }
+                           > a {
+                                padding: 0 ;
+                                i {
+                                    color: #000;
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                       }
+                   }
+               }
+           }
+       }
+   } 
+
+   #section01 {
+       .inner {
+           .winterChuck {
+               flex-direction: column;
+               .main {
+                   width: 100%;
+                   height: 50%;
+                   .imgBox {
+                       img {
+                           height: 100%;
+                       }
+                   }
+                   .infoBox {
+                       top: 15px;
+                       dt {
+                           font-size: 3rem;
+                       }
+                       dd {
+                           &.btnMore {
+                               display: none;
+                               a {
+                                   padding: 8px 20px;
+                               }
+                           }
+                       }
+                   }
+                   .resizeBtnMore {
+                       display: block;
+                   }
+               }
+               .items {
+                   width: 100%;
+                   height: 50%;
+                   li {
+                       height: 300px;
+                       &:hover {
+                           .imgBox {
+                               img {
+                                   &:last-child {
+                                       opacity: 0;
+                                   }
+                               }
+                           }
+                       }
+                       a {
+                           .imgBox {
+                               img {
+                                   height: 300px;
+                               }
+                           }
+                           .infoBox {
+                               bottom: 12px;
+                               font-size: 1.2rem;
+                               dd {
+                                   font-size: 1.4rem;
+                               }
+                           }
+                           p {
+                               font-size: 1.2rem;
+                           }
+                       }
+                   }
+               }
+            }
+            .choose {
+                .title {
+                    margin-bottom: 0;
+                    dd {
+                        display: none;
+                    }
+                }
+                .chooseList {
+                    li {
+                        margin: 0 5px;
+                    }
+                }
+                .resizeBtnMore {
+                    display: block;
+                }
+            }
+           .metallic {
+            flex-direction: column;
+            .main {
+                width: 100%;
+                height: 50%;
+                .imgBox {
+                    img {
+                        height: 100%;
+                    }
+                }
+                .infoBox {
+                    top: 15px;
+                    dt {
+                        font-size: 3rem;
+                    }
+                    dd {
+                        &.btnMore {
+                            display: none;
+                            a {
+                                padding: 8px 20px;
+                            }
+                        }
+                    }
+                }
+                .resizeBtnMore {
+                    display: block;
+                }
+            }
+            .items {
+                width: 100%;
+                height: 50%;
+                li {
+                    height: 300px;
+                    &:hover {
+                        .imgBox {
+                            img {
+                                &:last-child {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        .imgBox {
+                            img {
+                                height: 300px;
+                            }
+                        }
+                        .infoBox {
+                            bottom: 12px;
+                            font-size: 1.2rem;
+                            dd {
+                                font-size: 1.4rem;
+                            }
+                        }
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            }
+            .cozyClub {
+                flex-direction: column;
+                .main {
+                    width: 100%;
+                    .infoBox {
+                        dt {
+                            font-size: 3.8rem;
+                        }
+                        dd {
+                            &.btnMore {
+                                display: none;
+                            }
+                        }
+                    }
+                    .resizeBtnMore {
+                        display: block;
+                    }
+                }
+                .items {
+                    width: 100%;
+                    li {
+                        &:nth-child(1){
+                            &:hover {
+                                a {
+                                    .hoverBox {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(n+2){
+                            &:hover {
+                                a {
+                                    .imgBox {
+                                        img {
+                                            &:last-child {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            .hoverBox {
+                                dt {
+                                    opacity: 1;
+                                    font-size: 2.15rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .workWear {
+                flex-direction: column;
+                .main {
+                    width: 100%;
+                    .infoBox {
+                        dt {
+                            font-size: 3.8rem;
+                        }
+                        dd {
+                            &.btnMore {
+                                display: none;
+                            }
+                        }
+                    }
+                    .resizeBtnMore {
+                        display: block;
+                    }
+                }
+                .items {
+                    width: 100%;
+                    li {
+                        &:nth-child(1){
+                            &:hover {
+                                a {
+                                    .hoverBox {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(n+2){
+                            &:hover {
+                                a {
+                                    .imgBox {
+                                        img {
+                                            &:last-child {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            .hoverBox {
+                                dt {
+                                    opacity: 1;
+                                    font-size: 2.15rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .collabo {
+                div {
+                    &.paria {
+                        .pariaList {
+                            flex-direction: column;
+                            li {
+                                &:first-child {
+                                    .infoBox {
+                                        dt {
+                                            font-size: 3.8rem;
+                                        }
+                                        dd {
+                                            &.btnMore {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    .resizeBtnMore {
+                                        display: block;
+                                    }
+                                }
+                                &:last-child {
+                                    a {
+                                        .hoverBox {
+                                            dt {
+                                                font-size: 2.15rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.popTrading {
+                        flex-direction: column;
+                        .main {
+                            width: 100%;
+                            .infoBox {
+                                dd {
+                                    &.btnMore {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .resizeBtnMore {
+                                display: block;
+                            }
+                        }
+                        .items {
+                            width: 100%;
+                            li {
+                                &:nth-child(n+2){
+                                    &:hover {
+                                        a {
+                                            .imgBox {
+                                                img {
+                                                    &:last-child {
+                                                        opacity: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .outer {
+                flex-direction: column;
+                .main {
+                    width: 100%;
+                    height: 900px;
+                    .infoBox {
+                        bottom: 50px;
+                        left: 30px;
+                        dt {
+                            font-size: 3.8rem;
+                        }
+                        dd {
+                            &.btnMore {
+                                display: none;
+                            }
+                        }
+                    }
+                    .resizeBtnMore {
+                        display: block;
+                    }
+                }
+                .items {
+                    width: 100%;
+                    margin-top: 87px;
+                    li {
+                        &:nth-child(-n+2) {
+                            &:hover {
+                                a {
+                                    .imgBox {
+                                        img {
+                                            &:last-child {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(3){
+                            &:hover {
+                                a {
+                                    .hoverBox {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                            a {
+                                .hoverBox {
+                                    dt {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       }
+   }
+   
+   #section02 {
+       .inner {
+           .community {
+                h2 {
+                    font-size: 2.6rem;
+                }
+                .communityList {
+                    li {
+                        margin-bottom: 4px;
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 130px;
+                                }
+                            }
+                            span {
+                                i {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .marketing {
+                .marketingList {
+                    flex-wrap: wrap;
+                    border-top: 1px solid #dddcdc;
+                    border-bottom: 1px solid #dddcdc;
+                    li {
+                        width: 50%;
+                        &:nth-child(2){
+                            border: none;
+                        }
+                        .infoBox {
+                            dt {
+                                font-size: 1.6rem;
+                            }
+                            dd {
+                                font-size: 1.2rem;
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+            }
+       }
+   }
+
+   #footer {
+       .address {
+           font-weight: 300;
+           padding: 30px 0;
+           background-color: #fff;
+           .inner {
+               display: block;
+               text-align: center;
+               color: #757575;
+               .dlBox {
+                   font-size: 1.1rem;
+                   dl {
+                       display: block;
+                       &:first-child {
+                           dt {
+                               margin-bottom: 20px;
+                               font-size: 2rem;
+                               font-weight: 700;
+                               color: #000;
+                            }
+                       }
+                       dd {
+                        a {
+                            span {
+                                color: #000;
+                            }
+                        }
+                    }
+                   }
+                   .resizeMenu {
+                       display: flex;
+                   }   
+               }
+               .insurance {
+                   display: none;
+               }
+           }
+       }
+   }
+}
+
+@media all and(max-width:610px){ // #section01.choose
+    #section01 {
+        .inner {
+            .choose {
+                .title {
+                    dt {
+                        font-size: 2.6rem;
+                    }
+                    dd {
+                        a {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                .chooseList {
+                    li {
+                        a {
+                            h3 {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and(max-width:499px){
+    #txtSlide {
+        .mask {
+            width: 100%;
+            .txtWrap {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #header {
+        .inner {
+            height: 60px;
+            #gnb {
+                position: relative;
+                height: 700px;
+               .gnbList {
+                   > li {
+                    margin: 0;
+                       .depth02 {
+                           .depth02Inner {
+                               .depth02List {
+                                   padding: 0;
+                                   height: 100%;
+                                   li {
+                                       a {
+                                           font-size: 2rem;
+                                       }
+                                   }
+                               }
+                               .product {
+                                   padding-top: 20px;
+                                   &:before {
+                                       top: -5px;
+                                   }
+                                   li {
+                                       &:hover {
+                                           a {
+                                               p {
+                                                   border: none;
+                                               }
+                                           }
+                                       }
+                                       a {
+                                           p {
+                                               font-size: 1rem;
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+            }
+            .gnbFooter {
+                .address {
+                    display: none;
+                }
+            }
+            #util {
+                .utilList {
+                    > li {
+                        .searchBox {
+                            .searchCon {
+                                height: 100%;
+                                .searchInner {
+                                    .rightCon {
+                                       > li {
+                                           height: 250px;
+                                           &:first-child {
+                                               padding-top: 60px;
+                                           }
+                                           &:last-child {
+                                                padding: 40px 0 0 40px;
+                                           }
+                                           h3 {
+                                               font-size: 2.6rem;
+                                           }
+                                           .searchList {
+                                               display: flex;
+                                               padding-left: 0;
+                                               li {
+                                                   margin: 0 10px;
+                                                   a {
+                                                       span {
+                                                           font-size: 1.6rem;
+                                                       }
+                                                   }
+                                               }
+                                           }
+                                       } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section01 {
+        .inner {
+            .winterChuck {
+                .main {
+                    .imgBox {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            font-size: 3rem;
+                        }
+                        dd {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .items {
+                    li {
+                        height: 250px;
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 250px;
+                                }
+                            }
+                            .infoBox {
+                                bottom: 15px;
+                                left: 5px;
+                                font-size: 1.2rem;
+                                dt {
+                                    word-break: keep-all;
+                                }
+                            }
+                            p {
+                                right: 10px;
+                                font-size: 1rem;
+                            }
+                        }
+                        .btnWish {
+                            left: 10px;
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .choose {
+                .chooseList {
+                    li {
+                        a {
+                            h3 {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .metallic {
+                .main {
+                    .imgBox {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            font-size: 3rem;
+                        }
+                        dd {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .items {
+                    li {
+                        height: 250px;
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 250px;
+                                }
+                            }
+                            .infoBox {
+                                bottom: 15px;
+                                left: 5px;
+                                font-size: 1.2rem;
+                                dt {
+                                    word-break: keep-all;
+                                }
+                            }
+                            p {
+                                right: 10px;
+                                font-size: 1rem;
+                            }
+                        }
+                        .btnWish {
+                            left: 10px;
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .cozyClub {
+                .items {
+                    li {
+                        height: 250px;
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 250px;
+                                }
+                            }
+                            .infoBox {
+                                bottom: 15px;
+                                left: 5px;
+                                font-size: 1.2rem;
+                                dt {
+                                    word-break: keep-all;
+                                }
+                            }
+                            p {
+                                right: 10px;
+                                font-size: 1rem;
+                            }
+                        }
+                        .btnWish {
+                            left: 10px;
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+                .main {
+                    .imgBox {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            font-size: 3rem;
+                        }
+                        dd {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .workWear {
+                .items {
+                    li {
+                        height: 250px;
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 250px;
+                                }
+                            }
+                            .infoBox {
+                                bottom: 15px;
+                                left: 5px;
+                                font-size: 1.2rem;
+                                dt {
+                                    word-break: keep-all;
+                                }
+                            }
+                            p {
+                                right: 10px;
+                                font-size: 1rem;
+                            }
+                            .hoverBox {
+                                dt {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                        .btnWish {
+                            left: 10px;
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+                .main {
+                    .imgBox {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            font-size: 3rem;
+                        }
+                        dd {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .collabo {
+                div {
+                    &.paria {
+                        .pariaList {
+                            li {
+                                &:first-child {
+                                    .infoBox {
+                                        dt {
+                                            font-size: 3rem;
+                                        }
+                                        dd {
+                                            font-size: 1.2rem;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                                img {
+                                    height: 500px;
+                                }
+                            }
+                        }
+                    }
+                    &.popTrading {
+                        .main {
+                            .imgBox {
+                                img {
+                                    height: 500px;
+                                }
+                            }
+                            .infoBox {
+                                dt {
+                                    font-size: 3rem;
+                                }
+                                dd {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                        .items {
+                            li {
+                                height: 250px;
+                                &:nth-child(1){
+                                    .imgBox {
+                                        img {
+                                            height: 250px;
+                                        }
+                                    }
+                                }
+                                &:nth-child(n+2){
+                                    a {
+                                        .imgBox {
+                                            img {
+                                                height: 250px;
+                                            }
+                                        }
+                                        .infoBox {
+                                            bottom: 15px;
+                                            left: 5px;
+                                            font-size: 1.2rem;
+                                            dt {
+                                                word-break: keep-all;
+                                            }
+                                        }
+                                        p {
+                                            right: 10px;
+                                            font-size: 1rem;
+                                        }
+                                    }
+                                    .btnWish {
+                                        left: 10px;
+                                        i {
+                                            font-size: 2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .outer {
+                .main {
+                    height: 500px;
+                    .imgBox {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                    .infoBox {
+                        dt {
+                            font-size: 3rem;
+                        }
+                        dd {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .items {
+                    li {
+                        height: 250px;
+                        &:nth-child(-n+2){
+                            a {
+                                .imgBox {
+                                    img {
+                                        height: 250px;
+                                    }
+                                }
+                                .infoBox {
+                                    bottom: 15px;
+                                    left: 5px;
+                                    font-size: 1.2rem;
+                                    dt {
+                                        word-break: keep-all;
+                                    }
+                                }
+                                p {
+                                    right: 10px;
+                                    font-size: 1rem;
+                                }
+                            }
+                            .btnWish {
+                                left: 10px;
+                                i {
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        &:nth-child(3){
+                            a {
+                                .imgBox {
+                                    img {
+                                        height: 250px;
+                                    }
+                                }
+                                .hoverBox {
+                                    dt {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 250px;
+                                }
+                            }
+                            .hoverBox {
+                                dt {
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section02 {
+        .inner {
+            .community {
+                .communityList {
+                    li {
+                        a {
+                            .imgBox {
+                                img {
+                                    height: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .marketing {
+                .marketingList {
+                    li {
+                        height: 250px;
+                        .infoBox {
+                            dt {
+                                font-size: 1.4rem;
+                            }
+                            dd {
+                                font-size: 1rem;
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #login {
+        .loginWrap {
+            width: 80% !important;
+            height: 420px;
+            padding: 0 10px;
+            h3 {
+                margin: 25px 0 30px;
+                font-size: 2.4rem;
+            }
+            .loginBox {
+                width: 100%;
+                > label {
+                    input {
+                        width: 100%;
+                        height: 30px;
+                        &::placeholder {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .subBox {
+                    label {
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    a {
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .loginBtn {
+                    padding: 10px 0;
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+                .kakakoLoginBtn {
+                    padding: 10px 0;
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .infoBox {
+                width: 100%;
+                height: 50px;
+                dt {
+                    font-size: 3rem;
+                }
+                dd {
+                    font-size: 1rem;
+                    padding: 7px 0;
+                }
+            }
+            .btnClose {
+                width: 20px;
+                height: 20px;
+                span {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
